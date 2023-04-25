@@ -21,7 +21,7 @@ app.use("/api/employee", require("./routes/employeeRoutes"))
 app.use("/api/appointment", require("./routes/appointmentRoutes"))
 
 app.use("*", (req, res) => {
-    res.sendFile("public/index.html")
+    res.sendFile("./public/index.html")
 })
 mongoose.connection.once("open", () => {
     console.log("DB CONNECTED")
